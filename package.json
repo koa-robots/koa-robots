@@ -1,0 +1,43 @@
+{
+    "name": "koa-robots",
+    "version": "0.0.8",
+    "description": "基于 Koa 的 MVC 生成器",
+    "bin": {
+        "koa-robots": "./bin/bin"
+    },
+    "author": "寒飞紫",
+    "license": "MIT",
+    "engines": {
+        "node": ">=4.2.3"
+    },
+    "dependencies": {
+        "co": "^4.6.0",
+        "co-fs": "^1.2.0",
+        "co-mkdirp": "^0.1.0",
+        "co-prompt": "^1.0.0",
+        "colors": "^1.1.2",
+        "commander": "^2.9.0"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
+        "babel-plugin-transform-es2015-parameters": "^6.3.13",
+        "babel-plugin-transform-es2015-spread": "^6.4.0"
+    },
+    "babel": {
+        "plugins": [
+            "transform-es2015-spread",
+            "transform-es2015-parameters",
+            "transform-es2015-destructuring",
+            "transform-es2015-modules-commonjs"
+        ]
+    },
+    "scripts": {
+        "compile": "babel src -d dist",
+        "prepublish": "npm run compile"
+    },
+    "repository" : {
+        "type": "git",
+        "url" : "https://github.com/2046/koa-robots.git"
+    }
+}

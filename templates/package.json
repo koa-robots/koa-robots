@@ -1,0 +1,37 @@
+{
+    "private": true,
+    "engines": {
+        "node": ">=4.2.3"
+    },
+    "dependencies": {
+        "koa": "^1.1.0",
+        "koa-fresh": "0.0.3",
+        "koa-gzip": "^0.1.0",
+        "koa-jsonp": "^0.1.2",
+        "koa-onerror": "^1.2.1",
+        "koa-request": "^1.0.0",
+        "koa-response-time": "^1.0.2",
+        "koa-robots-static": "0.0.2"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.4.0",
+        "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
+        "babel-plugin-transform-es2015-parameters": "^6.3.13",
+        "babel-plugin-transform-es2015-spread": "^6.4.0",
+        "nodemon": "^1.8.1"
+    },
+    "babel": {
+        "plugins": [
+            "transform-es2015-spread",
+            "transform-es2015-parameters",
+            "transform-es2015-destructuring",
+            "transform-es2015-modules-commonjs"
+        ]
+    },
+    "scripts": {
+        "start": "npm run nodemon",
+        "babel-node": "./node_modules/.bin/babel-node app.js",
+        "nodemon": "./node_modules/.bin/nodemon --ignore views/ --ignore assets/ --exec npm run babel-node"
+    }
+}
