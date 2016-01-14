@@ -1,6 +1,6 @@
 {
     "name": "koa-robots",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "基于 Koa 的 MVC 生成器",
     "bin": {
         "koa-robots": "./bin/bin"
@@ -38,6 +38,6 @@
     },
     "repository" : {
         "type": "git",
-        "url" : "https://github.com/2046/koa-robots.git"
+        "url" : "https://github.com/koa-robots/koa-robots.git"
     }
 }
