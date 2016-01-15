@@ -6,6 +6,7 @@ import onerror from 'koa-onerror'
 import serve from 'koa-robots-static'
 import config from './resources/config'
 import responseTime from 'koa-response-time'
+import parameter from 'koa-robots-parameter'
 
 let app = koa()
 
@@ -17,4 +18,5 @@ app
     .use(gzip())
     .use(serve('./assets'))
     .use(jsonp())
+    .use(parameter(app))
     .listen(config.port)
