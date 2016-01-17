@@ -8,6 +8,7 @@ import render from 'koa-robots-render'
 import config from './resources/config'
 import responseTime from 'koa-response-time'
 import parameter from 'koa-robots-parameter'
+import browsersync from 'koa-robots-browsersync'
 
 let app = koa()
 
@@ -20,5 +21,6 @@ app
     .use(serve('./assets'))
     .use(jsonp())
     .use(parameter(app))
+    .use(browsersync(['./assets', './views']))
     .use(render('./views'))
     .listen(config.port)

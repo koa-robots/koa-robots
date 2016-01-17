@@ -12,8 +12,9 @@
         "koa-request": "^1.0.0",
         "koa-response-time": "^1.0.2",
         "koa-robots-static": "0.0.5",
-        "koa-robots-parameter": "0.0.1",
-        "koa-robots-render": "0.0.2"
+        "koa-robots-parameter": "0.0.2",
+        "koa-robots-render": "0.0.2",
+        "koa-robots-browsersync": "0.0.1"
     },
     "devDependencies": {
         "babel-cli": "^6.4.0",
