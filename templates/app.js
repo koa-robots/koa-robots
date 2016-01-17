@@ -4,6 +4,7 @@ import jsonp from 'koa-jsonp'
 import fresh from 'koa-fresh'
 import onerror from 'koa-onerror'
 import serve from 'koa-robots-static'
+import render from 'koa-robots-render'
 import config from './resources/config'
 import responseTime from 'koa-response-time'
 import parameter from 'koa-robots-parameter'
@@ -19,4 +20,5 @@ app
     .use(serve('./assets'))
     .use(jsonp())
     .use(parameter(app))
+    .use(render('./views'))
     .listen(config.port)
