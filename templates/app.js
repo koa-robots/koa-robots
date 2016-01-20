@@ -24,5 +24,5 @@ app
     .use(jsonp())
     .use(parameter(app))
     .use(browsersync(['./assets', './views']))
-    .use(render('./views'))
+    .use(render('./views', {cache : false}))
     .listen(config.port)
