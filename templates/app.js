@@ -5,6 +5,7 @@ import fresh from 'koa-fresh'
 import onerror from 'koa-onerror'
 import serve from 'koa-robots-static'
 import render from 'koa-robots-render'
+import logger from 'koa-robots-logger'
 import config from './resources/config'
 import responseTime from 'koa-response-time'
 import parameter from 'koa-robots-parameter'
@@ -16,6 +17,7 @@ onerror(app)
 
 app
     .use(responseTime())
+    .use(logger(app, config.logger))
     .use(fresh())
     .use(gzip())
     .use(serve('./assets'))
