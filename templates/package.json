@@ -15,7 +15,7 @@
         "koa-robots-parameter": "0.0.2",
         "koa-robots-render": "0.0.2",
         "koa-robots-logger": "0.0.1",
-        "koa-robots-browsersync": "0.0.1"
+        "koa-robots-browsersync": "0.0.2"
     },
     "devDependencies": {
         "babel-cli": "^6.4.0",
