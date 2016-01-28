@@ -1,6 +1,6 @@
 {
   "name": "koa-robots",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "基于 Koa 的 MVC 生成器",
   "bin": {
     "koa-robots": "./bin/bin"
