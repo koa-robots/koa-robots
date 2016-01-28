@@ -5,8 +5,10 @@ import fresh from 'koa-fresh'
 import onerror from 'koa-onerror'
 import serve from 'koa-robots-static'
 import render from 'koa-robots-render'
+import router from 'koa-robots-router'
 import logger from 'koa-robots-logger'
 import config from './resources/config'
+import routes from './resources/routes'
 import responseTime from 'koa-response-time'
 import parameter from 'koa-robots-parameter'
 import browsersync from 'koa-robots-browsersync'
@@ -25,4 +27,5 @@ app
     .use(parameter(app))
     .use(browsersync(['./assets', './views']))
     .use(render('./views', {cache : false}))
+    .use(router('./controllers', {routes : routes}))
     .listen(config.port)
