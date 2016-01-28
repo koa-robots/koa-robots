@@ -29,7 +29,8 @@ co(function *() {
     yield copyFile(
         '/app.js',
         '/package.json',
-        '/resources/config.js'
+        '/resources/config.js',
+        '/resources/routes.js'
     )
 }).then(() => {
     print()
