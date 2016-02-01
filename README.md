@@ -1,8 +1,21 @@
 # koa-robots
 
+Koa MVC generator
+
+#### Usage
+
+```javascript
+sudo npm i koa-robots -g
+
+koa-robots demo
+cd demo
+npm i
+npm start
+```
 
 #### Support Features
 
+- [x] ES6
 - [x] response time
 - [x] logger (based of log4j)
 - [x] fresh
