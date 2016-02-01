@@ -15,7 +15,6 @@ npm start
 
 #### Support Features
 
-- [x] ES6
 - [x] response time
 - [x] logger (based of log4j)
 - [x] fresh
