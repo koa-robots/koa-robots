@@ -34,15 +34,15 @@ _commander2.default.version(require('../package.json').version).usage('[path]').
 
 logs = [];
 path = (0, _path.join)(__dirname, '..', 'templates');
-cwd = process.argv.length === 2 ? process.cwd() : toAbsolutePath(process.argv[2]);
+cwd = (0, _path.normalize)((0, _path.resolve)(process.argv.length === 2 ? '.' : process.argv[2]));
 
 (0, _co2.default)(function* () {
     yield mkdir('/views', '/models', '/assets', '/resources', '/controllers');
 
     yield copyFile('/app.js', '/package.json', '/resources/config.js', '/resources/routes.js');
-}).then(() => {
+
     print();
-}, err => {
+}).catch(err => {
     console.error(err);
 });
 
@@ -96,13 +96,9 @@ function print() {
         logs.push(`      cd ${ (0, _path.relative)(process.cwd(), cwd) }\n`.red);
     }
 
-    logs.push('      npm install\n'.red);
+    logs.push('      npm i\n'.red);
     logs.push('      npm start\n'.red);
 
     console.log(logs.join(''));
     process.stdin.pause();
-}
-
-function toAbsolutePath(path) {
-    return (0, _path.isAbsolute)(path) ? path : (0, _path.join)(process.cwd(), path);
 }
