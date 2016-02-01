@@ -5,6 +5,7 @@
     },
     "dependencies": {
         "koa": "^1.1.0",
+        "koa-favicon": "^1.2.0",
         "koa-fresh": "0.0.3",
         "koa-gzip": "^0.1.0",
         "koa-jsonp": "^0.1.2",

@@ -30,7 +30,8 @@ co(function *() {
         '/app.js',
         '/package.json',
         '/resources/config.js',
-        '/resources/routes.js'
+        '/resources/routes.js',
+        '/resources/tpl-helpers.js'
     )
 
     print()

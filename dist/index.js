@@ -39,7 +39,7 @@ cwd = (0, _path.normalize)((0, _path.resolve)(process.argv.length === 2 ? '.' : 
 (0, _co2.default)(function* () {
     yield mkdir('/views', '/models', '/assets', '/resources', '/controllers');
 
-    yield copyFile('/app.js', '/package.json', '/resources/config.js', '/resources/routes.js');
+    yield copyFile('/app.js', '/package.json', '/resources/config.js', '/resources/routes.js', '/resources/tpl-helpers.js');
 
     print();
 }).catch(err => {

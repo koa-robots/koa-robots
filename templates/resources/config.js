@@ -17,5 +17,9 @@ export default {
                 "filename" : "access.log"
             }
         ]
+    },
+    "render" : {
+        max : 100,
+        cache : false
     }
 }
