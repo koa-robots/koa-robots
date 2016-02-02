@@ -34,3 +34,4 @@ npm start
 - [ ] database
 - [ ] mock
 - [ ] plugins
+- [ ] webSocket
