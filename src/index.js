@@ -1,12 +1,13 @@
 import co from 'co'
 import fs from 'co-fs'
+import semver from 'semver'
 import colors from 'colors'
 import prompt from 'co-prompt'
 import mkdirp from 'co-mkdirp'
 import commander from 'commander'
 import {join, normalize, resolve, relative} from 'path'
 
-let cwd, path, opts, logs
+let cwd, path, opts, logs, currentNodeVersion, enginesNodeVersion
 
 commander
     .version(require('../package.json').version)
@@ -14,8 +15,15 @@ commander
     .parse(process.argv)
 
 logs = []
+currentNodeVersion = process.version
 path = join(__dirname, '..', 'templates')
+enginesNodeVersion = require('../package.json').engines.node
 cwd = normalize(resolve(process.argv.length === 2 ? '.' : process.argv[2]))
+
+if(!semver.satisfies(currentNodeVersion, enginesNodeVersion)){
+    console.log(`koa-robots will not run on the current node version, please upgrade your version node is ${enginesNodeVersion}`)
+    process.exit()
+}
 
 co(function *() {
     yield mkdir(

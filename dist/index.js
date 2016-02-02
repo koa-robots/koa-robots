@@ -8,6 +8,10 @@ var _coFs = require('co-fs');
 
 var _coFs2 = _interopRequireDefault(_coFs);
 
+var _semver = require('semver');
+
+var _semver2 = _interopRequireDefault(_semver);
+
 var _colors = require('colors');
 
 var _colors2 = _interopRequireDefault(_colors);
@@ -28,13 +32,20 @@ var _path = require('path');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-let cwd, path, opts, logs;
+let cwd, path, opts, logs, currentNodeVersion, enginesNodeVersion;
 
 _commander2.default.version(require('../package.json').version).usage('[path]').parse(process.argv);
 
 logs = [];
+currentNodeVersion = process.version;
 path = (0, _path.join)(__dirname, '..', 'templates');
+enginesNodeVersion = require('../package.json').engines.node;
 cwd = (0, _path.normalize)((0, _path.resolve)(process.argv.length === 2 ? '.' : process.argv[2]));
+
+if (!_semver2.default.satisfies(currentNodeVersion, enginesNodeVersion)) {
+    console.log(`koa-robots will not run on the current node version, please upgrade your version node is ${ enginesNodeVersion }`);
+    process.exit();
+}
 
 (0, _co2.default)(function* () {
     yield mkdir('/views', '/models', '/assets', '/resources', '/controllers');
