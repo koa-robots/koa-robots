@@ -10,6 +10,7 @@ import router from 'koa-robots-router'
 import logger from 'koa-robots-logger'
 import config from './resources/config'
 import routes from './resources/routes'
+import session from 'koa-generic-session'
 import responseTime from 'koa-response-time'
 import parameter from 'koa-robots-parameter'
 import browsersync from 'koa-robots-browsersync'
@@ -24,6 +25,7 @@ tplPath = './views'
 staticFilePath = './assets'
 actionPath = './controllers'
 favPath = './resources/favicon.ico'
+app.keys = config.signedCookieKeys
 
 app
     .use(responseTime())
@@ -33,6 +35,7 @@ app
     .use(favicon(favPath))
     .use(serve(staticFilePath))
     .use(jsonp())
+    .use(session(Object.assign({key : 'sessionId'}, config.session)))
     .use(parameter(app))
     .use(browsersync([staticFilePath, tplPath]))
     .use(render(tplPath, Object.assign(config.render, {helpers : tplHelpers})))

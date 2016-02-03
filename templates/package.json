@@ -17,6 +17,7 @@
         "koa-robots-render": "0.0.3",
         "koa-robots-router": "0.0.2",
         "koa-robots-logger": "0.0.1",
+        "koa-generic-session": "^1.10.1",
         "koa-robots-browsersync": "0.0.3"
     },
     "devDependencies": {

@@ -21,5 +21,9 @@ export default {
     "render" : {
         max : 100,
         cache : false
-    }
+    },
+    "session" : {
+        "ttl" : 30 * 60 * 1000
+    },
+    "signedCookieKeys" : ["koa-robots"]
 }

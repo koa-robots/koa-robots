@@ -22,6 +22,7 @@ npm start
 - [x] gzip
 - [x] jsonp
 - [x] proxy
+- [x] session
 - [x] filter xss
 - [x] error Page
 - [x] hot reload
