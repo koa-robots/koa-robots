@@ -20,6 +20,7 @@
     "semver": "^5.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.5.1",
     "babel-plugin-transform-es2015-destructuring": "^6.4.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
     "babel-plugin-transform-es2015-parameters": "^6.3.13",
@@ -34,7 +35,7 @@
     ]
   },
   "scripts": {
-    "compile": "babel src -d dist",
+    "compile": "node_modules/.bin/babel src -d dist",
     "prepublish": "npm run compile"
   },
   "repository": {
