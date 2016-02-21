@@ -12,13 +12,13 @@
         "koa-onerror": "^1.2.1",
         "koa-request": "^1.0.0",
         "koa-response-time": "^1.0.2",
-        "koa-robots-static": "0.0.5",
-        "koa-robots-parameter": "0.0.2",
-        "koa-robots-render": "0.0.3",
-        "koa-robots-router": "0.0.2",
-        "koa-robots-logger": "0.0.1",
+        "koa-robots-static": "0.0.6",
+        "koa-robots-parameter": "0.0.3",
+        "koa-robots-render": "0.0.4",
+        "koa-robots-router": "0.0.3",
+        "koa-robots-logger": "0.0.2",
         "koa-generic-session": "^1.10.1",
-        "koa-robots-browsersync": "0.0.3"
+        "koa-robots-browsersync": "0.0.4"
     },
     "devDependencies": {
         "babel-cli": "^6.4.0",
