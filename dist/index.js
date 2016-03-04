@@ -48,9 +48,9 @@ if (!_semver2.default.satisfies(currentNodeVersion, enginesNodeVersion)) {
 }
 
 (0, _co2.default)(function* () {
-    yield mkdir('/views', '/models', '/assets', '/resources', '/controllers');
+    yield mkdir('/views', '/models', '/resources', '/controllers');
 
-    yield copyFile('/app.js', '/package.json', '/resources/config.js', '/resources/routes.js', '/resources/tpl-helpers.js');
+    yield copyFile('/app.js', '/package.json', '/resources/config.js', '/resources/routes.js', '/resources/helpers.js');
 
     print();
 }).catch(err => {
