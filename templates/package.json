@@ -21,6 +21,7 @@
         "koa-robots-browsersync": "0.0.4"
     },
     "devDependencies": {
+        "chokidar": "1.4.1",
         "babel-cli": "^6.4.0",
         "babel-plugin-transform-es2015-destructuring": "^6.4.0",
         "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
