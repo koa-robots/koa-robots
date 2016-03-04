@@ -25,5 +25,5 @@ export default {
     "session" : {
         "ttl" : 30 * 60 * 1000
     },
-    "signedCookieKeys" : ["koa-robots"]
+    "enableLiveReload" : true
 }

@@ -29,7 +29,6 @@ co(function *() {
     yield mkdir(
         '/views',
         '/models',
-        '/assets',
         '/resources',
         '/controllers'
     )
@@ -39,7 +38,7 @@ co(function *() {
         '/package.json',
         '/resources/config.js',
         '/resources/routes.js',
-        '/resources/tpl-helpers.js'
+        '/resources/helpers.js'
     )
 
     print()
