@@ -12,7 +12,7 @@
         "koa-request": "^1.0.0",
         "koa-compress": "^1.0.9",
         "koa-response-time": "^1.0.2",
-        "koa-robots-static": "0.0.6",
+        "koa-robots-static": "0.0.7",
         "koa-robots-parameter": "0.0.3",
         "koa-robots-render": "0.0.4",
         "koa-robots-router": "0.0.3",
