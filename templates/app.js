@@ -15,6 +15,7 @@ import session from 'koa-generic-session'
 import responseTime from 'koa-response-time'
 import parameter from 'koa-robots-parameter'
 import browsersync from 'koa-robots-browsersync'
+import webpackDev from 'koa-robots-webpack-dev'
 
 let app, staticPath
 
@@ -29,7 +30,7 @@ app.use(logger(app, config.logger))
 app.use(fresh())
 app.use(compress())
 app.use(favicon(`${staticPath}/favicon.ico`))
-app.use(serve(staticPath, {index : '!.html'}))
+app.use(serve(staticPath))
 app.use(jsonp())
 app.use(session(Object.assign({}, {key : 'sessionId'}, config.session)))
 app.use(parameter(app))
@@ -38,6 +39,7 @@ if(config.enableLiveReload){
     app.use(browsersync([staticPath]))
 }
 
+app.use(webpackDev(config.webpackConfig, config.webpackDevConfig))
 app.use(render(staticPath, Object.assign({}, config.render, {helpers : helpers})))
 app.use(router('./controllers', {routes : routes}))
 app.listen(config.port)
