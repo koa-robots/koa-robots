@@ -18,8 +18,7 @@
         "koa-robots-router": "0.0.3",
         "koa-robots-logger": "0.0.2",
         "koa-generic-session": "^1.10.1",
-        "koa-robots-browsersync": "0.0.4",
-        "koa-robots-webpack-dev": "0.0.1"
+        "koa-robots-browsersync": "0.0.4"
     },
     "devDependencies": {
         "chokidar": "1.4.1",

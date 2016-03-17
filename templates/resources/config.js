@@ -21,8 +21,5 @@ export default {
     },
     "session": {
         "ttl": 30 * 60 * 1000
-    },
-    "enableLiveReload": true,
-    "webpackConfig": {},
-    "webpackDevConfig": {}
+    }
 }
