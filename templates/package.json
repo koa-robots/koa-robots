@@ -13,12 +13,12 @@
         "koa-compress": "^1.0.9",
         "koa-response-time": "^1.0.2",
         "koa-robots-static": "0.0.7",
-        "koa-robots-parameter": "0.0.3",
         "koa-robots-render": "0.0.4",
         "koa-robots-router": "0.0.3",
         "koa-robots-logger": "0.0.2",
-        "koa-generic-session": "^1.10.1",
-        "koa-robots-browsersync": "0.0.4"
+        "koa-robots-plugin": "0.0.2",
+        "koa-robots-parameter": "0.0.3",
+        "koa-generic-session": "^1.10.1"
     },
     "devDependencies": {
         "chokidar": "1.4.1",
