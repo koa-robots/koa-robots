@@ -27,12 +27,22 @@ npm start
 - [x] error Page
 - [x] hot reload
 - [x] auto router
-- [x] browserSync
 - [x] parse GET & POST parameter
 - [x] template render (based of art-template)
 - [ ] restful
 - [ ] CRSF
 - [ ] database
-- [ ] mock
-- [ ] plugins
+- [x] mock
+- [x] plugins
 - [ ] webSocket
+
+#### Plugins
+
+browserSync
+
+```javascript
+npm i koa-robots-plugin-browsersync
+
+//config.js
+"plugins" : ["browsersync"]
+```

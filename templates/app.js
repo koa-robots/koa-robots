@@ -4,6 +4,7 @@ import fresh from 'koa-fresh'
 import favicon from 'koa-favicon'
 import onerror from 'koa-onerror'
 import compress from 'koa-compress'
+import mock from 'koa-robots-mock'
 import serve from 'koa-robots-static'
 import render from 'koa-robots-render'
 import router from 'koa-robots-router'
@@ -36,4 +37,5 @@ app.use(responseTime())
     .use(parameter(app))
     .use(render(staticPath, Object.assign(config.render, {helpers : helpers})))
     .use(router('./controllers', {routes : routes}))
+    .use(mock('./mock', {routes : routes}))
     .listen(config.port)
