@@ -20,7 +20,7 @@
         "koa-robots-plugin": "0.0.2",
         "koa-robots-parameter": "0.0.3",
         "koa-generic-session": "^1.10.1",
-        "koa-robots-plugin-browsersync": "0.0.1"
+        "koa-robots-plugin-browsersync": "0.0.2"
     },
     "devDependencies": {
         "chokidar": "1.4.1",
@@ -42,6 +42,6 @@
     "scripts": {
         "start": "npm run nodemon",
         "babel-node": "./node_modules/.bin/babel-node app.js",
-        "nodemon": "./node_modules/.bin/nodemon --ignore views/ --ignore assets/ --exec npm run babel-node"
+        "nodemon": "./node_modules/.bin/nodemon --ignore views/ --exec npm run babel-node"
     }
 }
