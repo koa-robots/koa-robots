@@ -33,9 +33,15 @@ app.use(responseTime())
     .use(favicon(`${staticPath}/favicon.ico`))
     .use(serve(staticPath))
     .use(jsonp())
-    .use(session(Object.assign({key : 'sessionId'}, config.session)))
+    .use(session(Object.assign({
+        key: 'sessionId'
+    }, config.session)))
     .use(parameter(app))
-    .use(render(staticPath, Object.assign(config.render, {helpers : helpers})))
-    .use(mock('./mock', {routes : routes}))
-    .use(router('./controllers', {routes : routes}))
+    .use(render(staticPath, Object.assign(config.render, {
+        helpers: helpers
+    })))
+    .use(mock('./mock'))
+    .use(router('./controllers', {
+        routes: routes
+    }))
     .listen(config.port)
