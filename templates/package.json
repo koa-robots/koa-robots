@@ -14,7 +14,7 @@
         "koa-response-time": "^1.0.2",
         "koa-robots-mock": "0.0.5",
         "koa-robots-static": "0.0.7",
-        "koa-robots-render": "0.0.5",
+        "koa-robots-render": "0.0.6",
         "koa-robots-router": "0.0.4",
         "koa-robots-logger": "0.0.2",
         "koa-robots-plugin": "0.0.2",
